@@ -17,4 +17,16 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  css: {
+    // 预加载
+    preprocessorOptions: {
+      // 全局样式变量预注入
+      scss: {
+        additionalData: `
+          @use "@/styles/variables.scss" as *;
+          @use "@/styles/mixin.scss" as *;
+        `,
+      },
+    },
+  },
 })

@@ -6,19 +6,27 @@ const counter = useCounterStore()
 
 <template>
   <div class="about">
-    <h1>This is an about page {{ counter.count }}</h1>
+    <h1 class="num">
+      This is an about page {{ counter.count }}
+    </h1>
     <button @click="counter.increment">
       加一
     </button>
   </div>
 </template>
 
-<style>
+<style scoped lang="scss">
 @media (min-width: 1024px) {
   .about {
     display: flex;
     align-items: center;
     min-height: 100vh;
   }
+}
+
+.num {
+  @include wh(500, 500);
+
+  color: $red;
 }
 </style>
