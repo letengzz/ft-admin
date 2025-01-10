@@ -6,7 +6,7 @@ export default antfu({
     // eslint-plugin-format
     formatters: true,
     // unocss 检测&格式化 暂时注释 等配置了unocss再开放为true
-    // unocss: true,
+    unocss: true,
     // vue的eslint配置
     vue: true,
     // 保存删除未引入的代码
